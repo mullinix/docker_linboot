@@ -2,9 +2,6 @@ FROM mullinix/nvidia-cuda-devel-gcc-gsl
 
 USER root
 
-# cleanup install cache
-RUN rm -rf /var/lib/apt/lists/*
-
 # download linboot source, compile, move executable
 RUN mkdir -p /tmp/linboot && \
     mkdir -p /usr/local/sbin && \
