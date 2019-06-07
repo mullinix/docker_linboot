@@ -2,13 +2,6 @@ FROM mullinix/nvidia-cuda-devel-gcc-gsl
 
 USER root
 
-# update repository information
-RUN apt-get update --fix-missing
-
-# install git 
-RUN apt-get install -y --no-install-recommends \
-    git
-
 # cleanup install cache
 RUN rm -rf /var/lib/apt/lists/*
 
